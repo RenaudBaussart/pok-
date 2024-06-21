@@ -17,6 +17,13 @@ export class PokemonListComponent implements OnInit {
   ngOnInit(): void {
     this.apiService.getPokemons().subscribe((data) => {
       this.pokemons = data;
+      console.log(this.pokemons)
     });
+  }
+  GetPokemonType(id : number){
+    return this.pokemons[id].types.map((type : any) => type.name );
+  }
+  GetPokemonFirstType(id : number){
+    return this.pokemons[id].types[0].name;
   }
 }
