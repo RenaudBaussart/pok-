@@ -1,11 +1,11 @@
 $background-list: white ;
-$grassColor:  #a9f687 ;
-$bugTypeColor: #9fb37a ;
-$electricColor: #f1e871 ;
-$fireColor:  #f17171 ;
-$normalColor: lightgray ;
-$rockColor:  #92804b ;
-$groundColor:  #f1d071 ;
+$PlanteColor:  #a9f687 ;
+$InsectTypeColor: #9fb37a ;
+$ÉlectrikColor: #f1e871 ;
+$FeuColor:  #f17171 ;
+$NormalColor: lightgray ;
+$RocheColor:  #92804b ;
+$SolColor:  #f1d071 ;
 $darkColor: #3a3a3a ;
 $fairyColor:  #f998f6 ;
 $flyingColor:  #98a7f9 ;
@@ -20,7 +20,7 @@ $waterColor: #2c4cdf ;
 
 
 ul{
-    background-color: grey;
+    background-color: $background-list;
     padding: 0;
     padding: 5px;
     li{
@@ -31,24 +31,24 @@ ul{
         list-style: none;
 
     }
-    .grassType{background-color: $grassColor}
-    .bugTypeType{background-color: $bugTypeColor}
-    .electricType{background-color: $electricColor}
-    .fireType{background-color: $fireColor}
-    .normalType{background-color: $normalColor}
-    .rockType{background-color: $rockColor}
-    .groundType{background-color: $groundColor}
-    .darkType{background-color: $darkColor}
-    .fairyType{background-color: $fairyColor}
-    .flyingType{background-color: $flyingColor  }
-    .poisonType{background-color: $poisonColor  }
-    .steelType{background-color: $steelColor}
-    .dragonType{background-color: $dragonColor}
-    .fightingType{background-color: $fightingColor}
-    .ghostType{background-color: $ghostColor}
-    .icType{background-color: $iceColor}
+    .PlanteType{background-color: $PlanteColor}
+    .InsecteType{background-color: $InsectTypeColor}
+    .ÉlectrikType{background-color: $ÉlectrikColor}
+    .FeuType{background-color: $FeuColor}
+    .NormalType{background-color: $NormalColor}
+    .RocheType{background-color: $RocheColor}
+    .SolType{background-color: $SolColor}
+    .TénèbresType{background-color: $darkColor}
+    .FéeType{background-color: $fairyColor}
+    .VolType{background-color: $flyingColor  }
+    .PoisonType{background-color: $poisonColor  }
+    .AcierType{background-color: $steelColor}
+    .DragonType{background-color: $dragonColor}
+    .CombatType{background-color: $fightingColor}
+    .SpéctreType{background-color: $ghostColor}
+    .GlaceType{background-color: $iceColor}
     .PsyType{background-color: $PsyColor}
-    .waterType{background-color: $waterColor}
+    .EauType{background-color: $waterColor}
     
     
 }
