@@ -5,7 +5,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root',
 })
 export class ApiService {
-  private apiUrl = 'https://pokeapi.co/api/v2/pokemon';
+  private apiUrl = 'https://tyradex.vercel.app/api/v1/gen/1';
 
   constructor(private http: HttpClient) {}
 
