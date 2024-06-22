@@ -23,13 +23,17 @@ ul{
     background-color: $background-list;
     padding: 0;
     padding: 5px;
+    min-width: 200px;
+    width: fit-content;
     li{
         background-color: lightgray;
         padding: 5px;
         border: black 1px solid;
         border-radius: 20px;
         list-style: none;
-
+        display: flex;
+        margin-top: 20px;
+        
     }
     .PlanteType{background-color: $PlanteColor}
     .InsecteType{background-color: $InsectTypeColor}
@@ -49,6 +53,8 @@ ul{
     .GlaceType{background-color: $iceColor}
     .PsyType{background-color: $PsyColor}
     .EauType{background-color: $waterColor}
-    
+    .listImage{
+        width: 10vw;
+    }
     
 }
