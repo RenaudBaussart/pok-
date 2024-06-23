@@ -3,8 +3,16 @@ export interface PokemonModel {
     fr: string;
   };
   pokedex_id: number;
-  types: string[];
+  types: PokemonType[];
   height: number;
   weight: number;
-  image: string;
+  sprites: PokemonImage;
+}
+
+export interface PokemonType {
+  name: string;
+}
+
+export interface PokemonImage {
+  regular: string;
 }
