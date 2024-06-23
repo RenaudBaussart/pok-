@@ -20,4 +20,8 @@ export class PokemonDetailComponent {
       this.selectedPokemon = pokemon;
     });
   }
+  statBarPercentage(currentStat: number){
+    return (currentStat * 100) / 255
+
+  }
 }
