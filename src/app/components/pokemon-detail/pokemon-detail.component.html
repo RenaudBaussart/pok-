@@ -1,1 +1,10 @@
-<p>pokemon-detail works!</p>
+<div *ngIf="selectedPokemon" class="pokemon-details">
+    <h2>{{ selectedPokemon.name.fr }}</h2>
+    <p><strong>ID:</strong> {{ selectedPokemon.pokedex_id}}</p>
+    <img src="{{ selectedPokemon.sprites.regular }}" alt="">
+    <p><strong>Height:</strong> {{ selectedPokemon.height }}</p>
+    <p><strong>Weight:</strong> {{ selectedPokemon.weight }}</p>
+</div>
+<div *ngIf="!selectedPokemon">
+    <p>Sélectionnez un Pokémon pour voir les détails</p>
+</div>
