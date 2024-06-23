@@ -11,6 +11,7 @@ export interface PokemonModel {
 
 export interface PokemonType {
   name: string;
+  image: string;
 }
 
 export interface PokemonImage {
