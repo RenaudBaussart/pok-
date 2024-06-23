@@ -1,3 +1,10 @@
 <ul>
-    <li class="{{GetPokemonFirstType(pokemon.pokedex_id - 1)}}Type" *ngFor="let pokemon of pokemons"> {{ pokemon.name.fr }} <div>{{GetPokemonType(pokemon.pokedex_id - 1)}}</div></li>
+    <li class="{{ GetPokemonFirstType(pokemon.pokedex_id - 1) }}Type" *ngFor="let pokemon of pokemons">
+        <div class="area1"><img src="{{ GetPokemonImg(pokemon.pokedex_id - 1) }}" alt="" class="listImage"></div>
+        <section class="area2">
+        <div>{{ pokemon.name.fr }}</div> 
+         <div>{{ GetPokemonType(pokemon.pokedex_id - 1) }}</div>
+        </section>
+         
+    </li>
 </ul>

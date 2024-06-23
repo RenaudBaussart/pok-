@@ -26,4 +26,7 @@ export class PokemonListComponent implements OnInit {
   GetPokemonFirstType(id : number){
     return this.pokemons[id].types[0].name;
   }
+  GetPokemonImg(id : number){
+    return this.pokemons[id].sprites.regular
+  }
 }
