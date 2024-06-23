@@ -7,6 +7,7 @@ export interface PokemonModel {
   height: number;
   weight: number;
   sprites: PokemonImage;
+  stats: stats;
 }
 
 export interface PokemonType {
@@ -16,4 +17,12 @@ export interface PokemonType {
 
 export interface PokemonImage {
   regular: string;
+}
+export interface stats{
+  atk: number;
+  def: number;
+  hp: number;
+  spe_atk: number;
+  spe_def: number;
+  vit: number;
 }
