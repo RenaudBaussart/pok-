@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiService } from '../../services/api.service';
 import { NgFor } from '@angular/common';
+import { PokemonModel } from '../../pokemon-model';
 
 @Component({
   selector: 'app-pokemon-list',
@@ -17,16 +18,20 @@ export class PokemonListComponent implements OnInit {
   ngOnInit(): void {
     this.apiService.getPokemons().subscribe((data) => {
       this.pokemons = data;
-      console.log(this.pokemons)
+      console.log(this.pokemons);
     });
   }
-  GetPokemonType(id : number){
-    return this.pokemons[id].types.map((type : any) => type.name );
+
+  onSelect(pokemon: PokemonModel): void {
+    this.apiService.selectPokemon(pokemon);
   }
-  GetPokemonFirstType(id : number){
+  GetPokemonType(id: number) {
+    return this.pokemons[id].types.map((type: any) => type.name);
+  }
+  GetPokemonFirstType(id: number) {
     return this.pokemons[id].types[0].name;
   }
-  GetPokemonImg(id : number){
-    return this.pokemons[id].sprites.regular
+  GetPokemonImg(id: number) {
+    return this.pokemons[id].sprites.regular;
   }
 }
