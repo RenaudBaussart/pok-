@@ -4,6 +4,8 @@
     <img src="{{ selectedPokemon.sprites.regular }}" alt="">
     <p><strong>Height:</strong> {{ selectedPokemon.height }}</p>
     <p><strong>Weight:</strong> {{ selectedPokemon.weight }}</p>
+    <img src="{{selectedPokemon.types[0].image}}" alt="">
+    <img src="{{selectedPokemon.types[1].image}}" alt="" *ngIf="selectedPokemon.types.length > 1">
 </div>
 <div *ngIf="!selectedPokemon">
     <p>Sélectionnez un Pokémon pour voir les détails</p>
