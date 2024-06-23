@@ -11,7 +11,7 @@ import { PokemonModel } from '../../pokemon-model';
   styleUrl: './pokemon-list.component.scss',
 })
 export class PokemonListComponent implements OnInit {
-  pokemons: any = [];
+  pokemons: PokemonModel[] = [];
 
   constructor(private apiService: ApiService) {}
 
@@ -29,7 +29,7 @@ export class PokemonListComponent implements OnInit {
     return this.pokemons[id].types.map((type: any) => type.name);
   }
   GetPokemonFirstType(id: number) {
-    return this.pokemons[id].types[0].name;
+    return this.pokemons[id].types[0]?.name;
   }
   GetPokemonImg(id: number) {
     return this.pokemons[id].sprites.regular;
