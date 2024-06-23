@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { PokemonModel } from '../pokemon-model';
 @Injectable({
   providedIn: 'root',
 })
@@ -9,7 +10,11 @@ export class ApiService {
 
   constructor(private http: HttpClient) {}
 
-  getPokemons(): Observable<any> {
-    return this.http.get(this.apiUrl);
+  getPokemons(): Observable<PokemonModel[]> {
+    return this.http.get<PokemonModel[]>(this.apiUrl);
+  }
+
+  selectPokemon(pokemon: PokemonModel): void {
+    console.log(pokemon);
   }
 }
