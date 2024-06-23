@@ -1,12 +1,14 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { BehaviorSubject, Observable } from 'rxjs';
 import { PokemonModel } from '../pokemon-model';
 @Injectable({
   providedIn: 'root',
 })
 export class ApiService {
   private apiUrl = 'https://tyradex.vercel.app/api/v1/gen/1';
+  private selectedPokemon = new BehaviorSubject<PokemonModel | null>(null);
+  selectedPokemon$ = this.selectedPokemon.asObservable();
 
   constructor(private http: HttpClient) {}
 
@@ -15,6 +17,6 @@ export class ApiService {
   }
 
   selectPokemon(pokemon: PokemonModel): void {
-    console.log(pokemon);
+    this.selectedPokemon.next(pokemon);
   }
 }
