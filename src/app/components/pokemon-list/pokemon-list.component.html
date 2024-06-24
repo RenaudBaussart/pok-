@@ -1,9 +1,11 @@
+<input type="text" class="searchbar" placeholder="Rechercher un Pokémon"
+       (input)="onSearch($event)">
 <ul>
     <li class="{{ GetPokemonFirstType(pokemon.pokedex_id - 1) }}Type"
-        (click)="onSelect(pokemon)" *ngFor="let pokemon of pokemons">
+        (click)="onSelect(pokemon)" *ngFor="let pokemon of filteredPokemons">
         <div class="area1">
             <img src="{{ GetPokemonImg(pokemon.pokedex_id - 1) }}" alt="" class="listImage">
-                </div>
+        </div>
         <section class="area2">
             <div>{{ pokemon.name.fr }}</div>
             <div>{{ GetPokemonType(pokemon.pokedex_id - 1) }}</div>
