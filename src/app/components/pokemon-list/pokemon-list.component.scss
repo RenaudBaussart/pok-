@@ -22,23 +22,22 @@ $waterColor: #2c4cdf;
 .listContainer {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 10vh 90vh;
+    grid-template-rows: 5vh 95vh;
     grid-column-gap: 0px;
     grid-row-gap: 0px;
     max-width: 100vh;
 
     .searchbar {
         grid-area: 1 / 1 / 2 / 2;
-        padding: 20px 30px;
         border: none;
         background-color: #F5F5F5;
-
         font-size: 15px;
-
-
         &:focus {
             outline: none;
         }
+        height: 10vh;
+        justify-self:stretch;
+        align-self: center;
     }
 
     ul {
@@ -51,10 +50,9 @@ $waterColor: #2c4cdf;
         padding: 0px 10px;
         list-style: none;
         overflow-y: scroll;
-
         width: 300px;
         scroll-snap-type: y mandatory;
-
+        max-height: 95vh;
         li {
             display: flex;
             padding: 20px;
