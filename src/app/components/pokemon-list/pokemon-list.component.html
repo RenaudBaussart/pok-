@@ -3,7 +3,7 @@
            (input)="onSearch($event)">
     <ul>
         <li style="height: 0px; padding: 0; visibility: hidden;"></li>
-        <li class="{{ GetPokemonFirstType(pokemon.pokedex_id - 1) }}Type"
+        <li [ngStyle]="{ 'background-color': getBackgroundColor(pokemon) }"
             (click)="onSelect(pokemon)"
             *ngFor="let pokemon of filteredPokemons">
             <div class="area1">

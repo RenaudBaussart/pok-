@@ -1,12 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiService } from '../../services/api.service';
-import { NgFor } from '@angular/common';
+import { NgFor, NgStyle } from '@angular/common';
 import { PokemonModel } from '../../pokemon-model';
+import { getTypeColor } from '../../types-colors';
 
 @Component({
   selector: 'app-pokemon-list',
   standalone: true,
-  imports: [NgFor],
+  imports: [NgFor, NgStyle],
   templateUrl: './pokemon-list.component.html',
   styleUrl: './pokemon-list.component.scss',
 })
@@ -38,6 +39,15 @@ export class PokemonListComponent implements OnInit {
         )
     );
   }
+
+  getBackgroundColor(pokemon: PokemonModel): string {
+    if (pokemon.types.length > 0) {
+      const primaryType = pokemon.types[0].name.toLowerCase();
+      return getTypeColor(primaryType);
+    }
+    return 'white'; // couleur par défaut
+  }
+
   GetPokemonType(id: number) {
     return this.pokemons[id].types.map((type: any) => type.name);
   }
