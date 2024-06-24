@@ -48,13 +48,13 @@ export class PokemonListComponent implements OnInit {
     return 'white'; // couleur par défaut
   }
 
-  GetPokemonType(id: number) {
+  getPokemonType(id: number) {
     return this.pokemons[id].types.map((type: any) => type.name);
   }
-  GetPokemonFirstType(id: number) {
+  getPokemonFirstType(id: number) {
     return this.pokemons[id].types[0]?.name;
   }
-  GetPokemonImg(id: number) {
+  getPokemonImg(id: number) {
     return this.pokemons[id].sprites.regular;
   }
 }
