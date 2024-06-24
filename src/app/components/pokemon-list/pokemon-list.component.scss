@@ -19,106 +19,130 @@ $PsyColor: #dc2867;
 $waterColor: #2c4cdf;
 
 
-
-
-ul {
-
-    background-color: $background-list;
-    scroll-padding-top: 15px;
+.listContainer {
     display: grid;
-    grid-row-gap: 18px;
-    padding: 0px 10px;
-    list-style: none;
-    overflow-y: scroll;
-    max-height: 80vh;
-    scroll-snap-type: y mandatory;
+    grid-template-columns: 1fr;
+    grid-template-rows: 10vh 90vh;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    max-width: 100vh;
 
-    li {
-        display: flex;
-        padding: 20px;
-        background: var(--white);
-        border-radius: 12px;
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 15%);
-        scroll-snap-align: start;
-        transition: all 0.2s;
+    .searchbar {
+        grid-area: 1 / 1 / 2 / 2;
+        padding: 20px 30px;
+        border: none;
+        background-color: #F5F5F5;
 
+        font-size: 15px;
+
+
+        &:focus {
+            outline: none;
+        }
     }
 
-    .PlanteType {
-        background-color: $PlanteColor
-    }
+    ul {
+        height: 100%;
+        grid-area: 2 / 1 / 9 / 2;
+        background-color: $background-list;
+        scroll-padding-top: 15px;
+        display: grid;
+        grid-row-gap: 18px;
+        padding: 0px 10px;
+        list-style: none;
+        overflow-y: scroll;
 
-    .InsecteType {
-        background-color: $InsectTypeColor
-    }
+        width: 300px;
+        scroll-snap-type: y mandatory;
 
-    .ÉlectrikType {
-        background-color: $ÉlectrikColor
-    }
+        li {
+            display: flex;
+            padding: 20px;
+            background: var(--white);
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 15%);
+            scroll-snap-align: start;
+            transition: all 0.2s;
 
-    .FeuType {
-        background-color: $FeuColor
-    }
+        }
 
-    .NormalType {
-        background-color: $NormalColor
-    }
+        .PlanteType {
+            background-color: $PlanteColor
+        }
 
-    .RocheType {
-        background-color: $RocheColor
-    }
+        .InsecteType {
+            background-color: $InsectTypeColor
+        }
 
-    .SolType {
-        background-color: $SolColor
-    }
+        .ÉlectrikType {
+            background-color: $ÉlectrikColor
+        }
 
-    .TénèbresType {
-        background-color: $darkColor
-    }
+        .FeuType {
+            background-color: $FeuColor
+        }
 
-    .FéeType {
-        background-color: $fairyColor
-    }
+        .NormalType {
+            background-color: $NormalColor
+        }
 
-    .VolType {
-        background-color: $flyingColor
-    }
+        .RocheType {
+            background-color: $RocheColor
+        }
 
-    .PoisonType {
-        background-color: $poisonColor
-    }
+        .SolType {
+            background-color: $SolColor
+        }
 
-    .AcierType {
-        background-color: $steelColor
-    }
+        .TénèbresType {
+            background-color: $darkColor
+        }
 
-    .DragonType {
-        background-color: $dragonColor
-    }
+        .FéeType {
+            background-color: $fairyColor
+        }
 
-    .CombatType {
-        background-color: $fightingColor
-    }
+        .VolType {
+            background-color: $flyingColor
+        }
 
-    .SpéctreType {
-        background-color: $ghostColor
-    }
+        .PoisonType {
+            background-color: $poisonColor
+        }
 
-    .GlaceType {
-        background-color: $iceColor
-    }
+        .AcierType {
+            background-color: $steelColor
+        }
 
-    .PsyType {
-        background-color: $PsyColor
-    }
+        .DragonType {
+            background-color: $dragonColor
+        }
 
-    .EauType {
-        background-color: $waterColor
-    }
+        .CombatType {
+            background-color: $fightingColor
+        }
 
-    .listImage {
-        -webkit-user-drag: none;
-        width: 5vw;
+        .SpéctreType {
+            background-color: $ghostColor
+        }
+
+        .GlaceType {
+            background-color: $iceColor
+        }
+
+        .PsyType {
+            background-color: $PsyColor
+        }
+
+        .EauType {
+            background-color: $waterColor
+        }
+
+        .listImage {
+            -webkit-user-drag: none;
+            width: 5vw;
+        }
+
     }
 
 }
