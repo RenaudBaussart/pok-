@@ -1,60 +1,149 @@
-$background-list: white ;
-$PlanteColor:  #a9f687 ;
-$InsectTypeColor: #9fb37a ;
-$ÉlectrikColor: #f1e871 ;
-$FeuColor:  #f17171 ;
-$NormalColor: lightgray ;
-$RocheColor:  #92804b ;
-$SolColor:  #f1d071 ;
-$darkColor: #3a3a3a ;
-$fairyColor:  #f998f6 ;
-$flyingColor:  #98a7f9 ;
-$poisonColor:  #b05ee2 ;
-$steelColor:  #aaaaaa ;
-$dragonColor:  #8375bd ;
-$fightingColor:  #a47c49 ;
-$ghostColor:  #4950a4 ;
-$iceColor: #94f1ee ;
-$PsyColor: #dc2867 ;
-$waterColor: #2c4cdf ;
+$background-list: white;
+$PlanteColor: #a9f687;
+$InsectTypeColor: #9fb37a;
+$ÉlectrikColor: #f1e871;
+$FeuColor: #f17171;
+$NormalColor: lightgray;
+$RocheColor: #92804b;
+$SolColor: #f1d071;
+$darkColor: #3a3a3a;
+$fairyColor: #f998f6;
+$flyingColor: #98a7f9;
+$poisonColor: #b05ee2;
+$steelColor: #aaaaaa;
+$dragonColor: #8375bd;
+$fightingColor: #a47c49;
+$ghostColor: #4950a4;
+$iceColor: #94f1ee;
+$PsyColor: #dc2867;
+$waterColor: #2c4cdf;
 
 
-ul{
+
+
+ul {
+
     background-color: $background-list;
-    padding: 0;
-    padding: 5px;
-    min-width: 200px;
-    width: fit-content;
-    li{
-        background-color: lightgray;
-        padding: 5px;
-        border: black 1px solid;
-        border-radius: 20px;
-        list-style: none;
+    scroll-padding-top: 15px;
+    display: grid;
+    grid-row-gap: 18px;
+    padding: 0px 10px;
+    list-style: none;
+    overflow-y: scroll;
+    max-height: 80vh;
+    scroll-snap-type: y mandatory;
+
+    li {
         display: flex;
-        margin-top: 20px;
-        
+        padding: 20px;
+        background: var(--white);
+        border-radius: 12px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 15%);
+        scroll-snap-align: start;
+        transition: all 0.2s;
+
     }
-    .PlanteType{background-color: $PlanteColor}
-    .InsecteType{background-color: $InsectTypeColor}
-    .ÉlectrikType{background-color: $ÉlectrikColor}
-    .FeuType{background-color: $FeuColor}
-    .NormalType{background-color: $NormalColor}
-    .RocheType{background-color: $RocheColor}
-    .SolType{background-color: $SolColor}
-    .TénèbresType{background-color: $darkColor}
-    .FéeType{background-color: $fairyColor}
-    .VolType{background-color: $flyingColor  }
-    .PoisonType{background-color: $poisonColor  }
-    .AcierType{background-color: $steelColor}
-    .DragonType{background-color: $dragonColor}
-    .CombatType{background-color: $fightingColor}
-    .SpéctreType{background-color: $ghostColor}
-    .GlaceType{background-color: $iceColor}
-    .PsyType{background-color: $PsyColor}
-    .EauType{background-color: $waterColor}
-    .listImage{
-        width: 10vw;
+
+    .PlanteType {
+        background-color: $PlanteColor
     }
-    
+
+    .InsecteType {
+        background-color: $InsectTypeColor
+    }
+
+    .ÉlectrikType {
+        background-color: $ÉlectrikColor
+    }
+
+    .FeuType {
+        background-color: $FeuColor
+    }
+
+    .NormalType {
+        background-color: $NormalColor
+    }
+
+    .RocheType {
+        background-color: $RocheColor
+    }
+
+    .SolType {
+        background-color: $SolColor
+    }
+
+    .TénèbresType {
+        background-color: $darkColor
+    }
+
+    .FéeType {
+        background-color: $fairyColor
+    }
+
+    .VolType {
+        background-color: $flyingColor
+    }
+
+    .PoisonType {
+        background-color: $poisonColor
+    }
+
+    .AcierType {
+        background-color: $steelColor
+    }
+
+    .DragonType {
+        background-color: $dragonColor
+    }
+
+    .CombatType {
+        background-color: $fightingColor
+    }
+
+    .SpéctreType {
+        background-color: $ghostColor
+    }
+
+    .GlaceType {
+        background-color: $iceColor
+    }
+
+    .PsyType {
+        background-color: $PsyColor
+    }
+
+    .EauType {
+        background-color: $waterColor
+    }
+
+    .listImage {
+        -webkit-user-drag: none;
+        width: 5vw;
+    }
+
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #ffffff;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #a3a3a3;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background-color: rgb(0, 0, 0);
 }
