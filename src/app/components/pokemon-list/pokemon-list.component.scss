@@ -1,23 +1,4 @@
 $background-list: white;
-$PlanteColor: #a9f687;
-$InsectTypeColor: #9fb37a;
-$ÉlectrikColor: #f1e871;
-$FeuColor: #f17171;
-$NormalColor: lightgray;
-$RocheColor: #92804b;
-$SolColor: #f1d071;
-$darkColor: #3a3a3a;
-$fairyColor: #f998f6;
-$flyingColor: #98a7f9;
-$poisonColor: #b05ee2;
-$steelColor: #aaaaaa;
-$dragonColor: #8375bd;
-$fightingColor: #a47c49;
-$ghostColor: #4950a4;
-$iceColor: #94f1ee;
-$PsyColor: #dc2867;
-$waterColor: #2c4cdf;
-
 
 .listContainer {
     width: 450px;
@@ -59,78 +40,6 @@ $waterColor: #2c4cdf;
             scroll-snap-align: start;
             transition: all 0.2s;
 
-        }
-
-        .PlanteType {
-            background-color: $PlanteColor
-        }
-
-        .InsecteType {
-            background-color: $InsectTypeColor
-        }
-
-        .ÉlectrikType {
-            background-color: $ÉlectrikColor
-        }
-
-        .FeuType {
-            background-color: $FeuColor
-        }
-
-        .NormalType {
-            background-color: $NormalColor
-        }
-
-        .RocheType {
-            background-color: $RocheColor
-        }
-
-        .SolType {
-            background-color: $SolColor
-        }
-
-        .TénèbresType {
-            background-color: $darkColor
-        }
-
-        .FéeType {
-            background-color: $fairyColor
-        }
-
-        .VolType {
-            background-color: $flyingColor
-        }
-
-        .PoisonType {
-            background-color: $poisonColor
-        }
-
-        .AcierType {
-            background-color: $steelColor
-        }
-
-        .DragonType {
-            background-color: $dragonColor
-        }
-
-        .CombatType {
-            background-color: $fightingColor
-        }
-
-        .SpéctreType {
-            background-color: $ghostColor
-        }
-
-        .GlaceType {
-            background-color: $iceColor
-        }
-
-        .PsyType {
-            background-color: $PsyColor
-        }
-
-        .EauType {
-            background-color: $waterColor
         }
 
         .listImage {
