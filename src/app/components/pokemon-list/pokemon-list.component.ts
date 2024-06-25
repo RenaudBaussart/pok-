@@ -1,13 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiService } from '../../services/api.service';
-import { NgFor, NgStyle } from '@angular/common';
+import { NgFor, NgIf, NgStyle } from '@angular/common';
 import { PokemonModel } from '../../pokemon-model';
 import { getTypeColor } from '../../types-colors';
 
 @Component({
   selector: 'app-pokemon-list',
   standalone: true,
-  imports: [NgFor, NgStyle],
+  imports: [NgFor, NgStyle, NgIf],
   templateUrl: './pokemon-list.component.html',
   styleUrl: './pokemon-list.component.scss',
 })
