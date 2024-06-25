@@ -78,6 +78,12 @@ $background-list: white;
                     width: 50px;
                 }
             }
+
+            &:hover {
+                cursor: pointer;
+                transition: ease-in-out 0.3s;
+                scale: 1.05;
+            }
         }
 
     }
