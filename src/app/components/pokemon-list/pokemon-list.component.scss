@@ -20,19 +20,21 @@ $waterColor: #2c4cdf;
 
 
 .listContainer {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 5vh 95vh;
-    grid-column-gap: 0px;
-    grid-row-gap: 0px;
-    max-width: 100vh;
+    width: 450px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
     .searchbar {
-        grid-area: 1 / 1 / 2 / 2;
         border: none;
         background-color: #F5F5F5;
-        font-size: 15px;
-        height: 5vh;
+        font-size: 18px;
+        width: 300px;
+        border-radius: 30px;
+        padding: 20px 30px;
+        margin: 10px auto;
+
         &:focus {
             outline: none;
         }
@@ -40,21 +42,17 @@ $waterColor: #2c4cdf;
 
     ul {
         height: 100%;
-        grid-area: 2 / 1 / 9 / 2;
         background-color: $background-list;
         scroll-padding-top: 15px;
-        display: grid;
-        grid-row-gap: 18px;
-        padding: 0px 10px;
         list-style: none;
         overflow-y: scroll;
-        height: 95vh;
-        width: 300px;
+        width: 350px;
         scroll-snap-type: y mandatory;
 
         li {
             display: flex;
             padding: 20px;
+            margin-bottom: 20px;
             background: var(--white);
             border-radius: 12px;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 15%);
@@ -161,10 +159,10 @@ $waterColor: #2c4cdf;
 }
 
 ::-webkit-scrollbar-track {
-    background-color: #a3a3a3;
+    background-color: transparent;
 }
 
 ::-webkit-scrollbar-thumb {
     border-radius: 4px;
-    background-color: rgb(0, 0, 0);
+    background-color: rgb(145, 145, 145);
 }
