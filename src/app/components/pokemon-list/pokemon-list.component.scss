@@ -35,16 +35,18 @@ $background-list: white;
         li {
             display: flex;
             justify-content: space-around;
-            width: 80%;
+            width: 70%;
             height: 150px;
             margin: 0 auto;
-            margin-bottom: 20px;
+            margin-bottom: 40px;
+            margin-top: 40px;
             padding: 20px;
             background: var(--white);
             border-radius: 12px;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 15%);
             scroll-snap-align: start;
-            transition: all 0.2s;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+            transform-origin: top;
 
 
             .textContainer {
@@ -81,8 +83,7 @@ $background-list: white;
 
             &:hover {
                 cursor: pointer;
-                transition: ease-in-out 0.3s;
-                scale: 1.05;
+                transform: scale(1.1);
             }
         }
 
