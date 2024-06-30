@@ -6,14 +6,15 @@
         <li [ngStyle]="{ 'background-color': getBackgroundColor(pokemon) }"
             (click)="onSelect(pokemon)"
             *ngFor="let pokemon of filteredPokemons">
-            <div class="area1">
-                <img src="{{ getPokemonImg(pokemon.pokedex_id - 1) }}" alt=""
-                     class="listImage">
-            </div>
-            <section class="area2">
-                <div>{{ pokemon.name.fr }}</div>
-                <div>{{ getPokemonType(pokemon.pokedex_id - 1) }}</div>
+            <section class="textContainer">
+                <h1>{{ pokemon.name.fr }}</h1>
+                <div class="imgTypesContainer"><img
+                         src="{{pokemon.types[0].image}}" alt="">
+                    <img src="{{pokemon.types[1].image}}" alt=""
+                         *ngIf="pokemon.types.length > 1">
+                </div>
             </section>
+            <img src="{{ getPokemonImg(pokemon.pokedex_id - 1) }}" alt="">
         </li>
     </ul>
 </div>
