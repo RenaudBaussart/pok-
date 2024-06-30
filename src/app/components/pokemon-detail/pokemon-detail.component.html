@@ -3,82 +3,98 @@
      class="pokemon-details">
     <section class="nameContainer">
         <h2>{{ selectedPokemon.name.fr }}</h2>
-        <p><strong>ID:</strong> {{ selectedPokemon.pokedex_id}}</p>
+        <p>#{{ selectedPokemon.pokedex_id}}</p>
     </section>
-    <figure class="pokemonImageContainer">
-        <img src="{{ selectedPokemon.sprites.regular }}" alt="">
-    </figure>
-    <section class="detailsStatsContainer">
-        <!--type icon-->
-        <section class="typesContainer">
-            <img src="{{selectedPokemon.types[0].image}}" alt="">
-            <img src="{{selectedPokemon.types[1].image}}" alt=""
-                 *ngIf="selectedPokemon.types.length > 1">
-        </section>
-        <section class="listContainer">
+    <h3>
+    </h3>
+    <div class="pannelImgContainer">
+        <section class="detailsStatsContainer">
+            <!--type icon-->
+            <section class="typesContainer">
+                <img src="{{selectedPokemon.types[0].image}}" alt="">
+                <img src="{{selectedPokemon.types[1].image}}" alt=""
+                     *ngIf="selectedPokemon.types.length > 1">
+            </section>
             <ul class="statsList">
-                <li class="listPartContainer">
-                    <p>Attack</p>
-                    <p>{{selectedPokemon.stats.atk}}</p>
+                <li>
+                    <div class="stats">
+                        <h4>Attaque</h4>
+                        <p> {{selectedPokemon.stats.atk}}</p>
+                    </div>
                     <div class="statsBarBackground">
                         <div class="statsBar atkFill"
                              [style.width.%]="statBarPercentage(selectedPokemon.stats.atk)">
                         </div>
                     </div>
                 </li>
-                <li class="listPartContainer">
-                    <p>Défence</p>
-                    <p>{{selectedPokemon.stats.def}}</p>
+                <li>
+                    <div class="stats">
+                        <h4>Défense</h4>
+                        <p> {{selectedPokemon.stats.def}}</p>
+                    </div>
                     <div class="statsBarBackground">
                         <div class="statsBar defFill"
                              [style.width.%]="statBarPercentage(selectedPokemon.stats.def)">
                         </div>
                     </div>
                 </li>
-                <li class="listPartContainer">
-                    <p>Points de Vie</p>
-                    <p>{{selectedPokemon.stats.hp}}</p>
+                <li>
+                    <div class="stats">
+                        <h4>PV</h4>
+                        <p>{{selectedPokemon.stats.hp}}</p>
+                    </div>
                     <div class="statsBarBackground">
                         <div class="statsBar hpFill"
                              [style.width.%]="statBarPercentage(selectedPokemon.stats.hp)">
                         </div>
                     </div>
                 </li>
-                <li class="listPartContainer">
-                    <p>Attack Spécial</p>
-                    <p>{{selectedPokemon.stats.spe_atk}}</p>
+                <li>
+                    <div class="stats">
+                        <h4>Attaque Spé</h4>
+                        <p>{{selectedPokemon.stats.spe_atk}} </p>
+                    </div>
                     <div class="statsBarBackground">
                         <div class="statsBar atkSpeFill"
                              [style.width.%]="statBarPercentage(selectedPokemon.stats.spe_atk)">
                         </div>
                     </div>
                 </li>
-                <li class="listPartContainer">
-                    <p>Défence Special</p>
-                    <p>{{selectedPokemon.stats.spe_def}}</p>
+                <li>
+                    <div class="stats">
+                        <h4>Défense Spé</h4>
+                        <p>{{selectedPokemon.stats.spe_def}} </p>
+                    </div>
                     <div class="statsBarBackground">
                         <div class="statsBar defSpeFill"
                              [style.width.%]="statBarPercentage(selectedPokemon.stats.spe_def)">
                         </div>
                     </div>
                 </li>
-                <li class="listPartContainer">
-                    <p>Vitesse</p>
-                    <p>{{selectedPokemon.stats.vit}}</p>
+                <li>
+                    <div class="stats">
+                        <h4>Vitesse</h4>
+                        <p>{{selectedPokemon.stats.vit}}</p>
+                    </div>
                     <div class="statsBarBackground">
                         <div class="statsBar vitFill"
                              [style.width.%]="statBarPercentage(selectedPokemon.stats.vit)">
                         </div>
                     </div>
                 </li>
+                <li class="weight">
+                    <h4>Poids</h4>
+                    <p>{{selectedPokemon.weight}}</p>
+                </li>
+                <li class="height">
+                    <h4>Taille</h4>
+                    <p>{{selectedPokemon.height}}</p>
+                </li>
             </ul>
         </section>
-        <!--weight and height-->
-        <section class="weightHeightContainer">
-            <p><strong>Height:</strong> {{ selectedPokemon.height }}</p>
-            <p><strong>Weight:</strong> {{ selectedPokemon.weight }}</p>
-        </section>
-    </section>
+        <img class="pokemonImg" src="{{ selectedPokemon.sprites.regular }}"
+             alt="pokemon image">
+    </div>
 </div>
 <div *ngIf="!selectedPokemon">
     <p>Sélectionnez un Pokémon pour voir les détails</p>
